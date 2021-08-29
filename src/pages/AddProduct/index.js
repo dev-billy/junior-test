@@ -79,7 +79,7 @@ function AddProduct() {
     };
 
     fetch(
-      "http://junior-test.devbillyapps.com/backend/index.php/products/addProduct",
+      "https://junior-test.devbillyapps.com/backend/index.php/products/addProduct",
       requestOptions
     )
       .then((response) => response.json())

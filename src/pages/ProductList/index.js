@@ -34,7 +34,7 @@ function ProductList() {
       };
 
       fetch(
-        "http://junior-test.devbillyapps.com/backend/index.php/products/deleteProduct",
+        "https://junior-test.devbillyapps.com/backend/index.php/products/deleteProduct",
         requestOptions
       )
         .then((response) => response.text())
@@ -43,7 +43,9 @@ function ProductList() {
     });
   }
   useEffect(() => {
-    fetch("http://junior-test.devbillyapps.com/backend/index.php/products/list")
+    fetch(
+      "https://junior-test.devbillyapps.com/backend/index.php/products/list"
+    )
       .then((response) => response.json())
       .then((result) => {
         setData(result);
