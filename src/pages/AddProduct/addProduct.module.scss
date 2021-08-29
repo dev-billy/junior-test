@@ -1,0 +1,75 @@
+.content {
+  width: 80%;
+  padding: 1em;
+  margin: 1em auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  background-color: white;
+  box-shadow: 0 0 4px #eee;
+}
+
+.inputGroup {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  label {
+    margin: 5px 0;
+  }
+  input,
+  select {
+    padding: 0.5em 0.45em;
+  }
+}
+.primaryBtn {
+  background-color: #0275d8;
+  color: white;
+  transition: all 0.2s;
+  border: solid 1px #0274d800;
+  align-self: stretch;
+}
+.primaryBtn:disabled {
+  background-color: #eee;
+  color: #000;
+}
+.primaryBtn:disabled.primaryBtn:hover {
+  background-color: #eee;
+  color: #000;
+  cursor: not-allowed;
+  border-color: rgba(0, 0, 0, 0);
+}
+.primaryBtn:hover {
+  background-color: white;
+  color: #0275d8;
+  border-color: #0275d8;
+}
+.loadingState {
+  background: white;
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 4px #eee;
+  padding: 1.5em 1.2em;
+  text-align: center;
+  .closeBtn {
+    background-color: #ff5252;
+    color: white;
+    padding: 0.5em;
+    align-self: flex-end;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .content {
+    width: 30%;
+    align-self: flex-start;
+    margin: 1em 0;
+  }
+  .primaryBtn {
+    align-self: flex-end;
+  }
+}
