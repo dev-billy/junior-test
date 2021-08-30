@@ -18,34 +18,32 @@ function Card(props) {
           name={SKU}
           id="delete"
           onChange={onChange}
+          className={"delete-checkbox"}
           checked={checkIfItemIsSelected(SKU)}
         />
       </form>
       <div className={cardStyles.textContent}>
         <h4>{SKU}</h4>
         <h4>{name}</h4>
-        <h4>Price: {price} $</h4>
+        <h4>{price} $</h4>
 
         {propertiesObj && propertiesObj.dimensions !== undefined && (
           <h4>
-            {"Dimensions: " +
+            {"Dimension: " +
               propertiesObj.dimensions.height +
-              "cm" +
               "x" +
               propertiesObj.dimensions.width +
-              "cm" +
               "x" +
-              propertiesObj.dimensions.length +
-              "cm"}
+              propertiesObj.dimensions.length}
           </h4>
         )}
 
         {propertiesObj && propertiesObj.size !== undefined && (
-          <h4>{"Size: " + propertiesObj.size + " Mb"} </h4>
+          <h4>{"Size: " + propertiesObj.size + " MB"} </h4>
         )}
 
         {propertiesObj && propertiesObj.weight !== undefined && (
-          <h4>{"Weight: " + propertiesObj.weight + " Kg"}</h4>
+          <h4>{"Weight: " + propertiesObj.weight + " KG"}</h4>
         )}
       </div>
     </div>

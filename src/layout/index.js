@@ -39,6 +39,7 @@ function Layout(props) {
         </nav>
       </header>
       <section className={layoutStyles.content}>{props.children}</section>
+      <footer className={layoutStyles.footer}>Scandiweb Test assignment</footer>
     </main>
   );
 }

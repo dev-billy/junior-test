@@ -19,28 +19,29 @@ function ProductList() {
     }
   }
   function handleDelete() {
-    setLoading(true);
-    deleteItems.forEach((item) => {
-      const rawdata = JSON.stringify({ SKU: item.SKU });
-      console.log(rawdata);
-      const headers = new Headers();
-      headers.append("Content-Type", "application/json");
-      headers.append("Access-Control-Allow-Origin", "*");
-      const requestOptions = {
-        method: "DELETE",
-        body: rawdata,
-        headers: headers,
-        redirect: "follow",
-      };
+    if (deleteItems.length > 0) {
+      setLoading(true);
+      deleteItems.forEach((item) => {
+        const rawdata = JSON.stringify({ SKU: item.SKU });
+        const headers = new Headers();
+        headers.append("Content-Type", "application/json");
+        headers.append("Access-Control-Allow-Origin", "*");
+        const requestOptions = {
+          method: "DELETE",
+          body: rawdata,
+          headers: headers,
+          redirect: "follow",
+        };
 
-      fetch(
-        "https://junior-test.devbillyapps.com/backend/index.php/products/deleteProduct",
-        requestOptions
-      )
-        .then((response) => response.text())
-        .then((result) => history.go(0))
-        .catch((error) => history.go(0));
-    });
+        fetch(
+          "https://junior-test.devbillyapps.com/backend/index.php/products/deleteProduct",
+          requestOptions
+        )
+          .then((response) => response.text())
+          .then((result) => history.go(0))
+          .catch((error) => console.log(error));
+      });
+    }
   }
   useEffect(() => {
     fetch(

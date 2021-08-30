@@ -13,6 +13,9 @@
   justify-content: space-between;
   border-bottom: solid 2px black;
 }
+.content {
+  min-height: 80vh;
+}
 .actionBtns {
   display: flex;
   margin-bottom: 10px;
@@ -48,6 +51,11 @@ button {
 }
 button:hover {
   cursor: pointer;
+}
+.footer {
+  border-top: solid 2px black;
+  text-align: center;
+  padding-top: 1.5em;
 }
 
 @media screen and (min-width: 768px) {
