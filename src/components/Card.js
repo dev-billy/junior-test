@@ -3,7 +3,6 @@ import * as cardStyles from "./component-styles/card.module.scss";
 function Card(props) {
   const { SKU, name, price, properties, onChange, items } = props;
   const propertiesObj = properties && JSON.parse(properties);
-  console.log(propertiesObj);
   function checkIfItemIsSelected(name) {
     let filteredForItem = items.filter((item) => item.SKU === name);
     if (filteredForItem.length === 0) {
