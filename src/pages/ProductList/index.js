@@ -39,7 +39,7 @@ function ProductList() {
       )
         .then((response) => response.text())
         .then((result) => history.go(0))
-        .catch((error) => console.log("error", error));
+        .catch((error) => history.go(0));
     });
   }
   useEffect(() => {
